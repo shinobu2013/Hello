@@ -60,8 +60,9 @@ public class Moppy : MonoBehaviour
             status = MoppyStatus.Waked;
             Image image = GetComponent<Image>();
             image.sprite = wakedImage;
-            xSpeed = Random.Range(-3.0f, 3.0f);
-            ySpeed = Random.Range(-3.0f, 0.0f);
+            xSpeed = Random.Range(-20.0f, 20.0f);
+            xSpeed += (xSpeed >= 0) ? 10.0f : -10.0f;
+            ySpeed = Random.Range(-20.0f, 0.0f) - 10.0f;
         }
         else if (status == MoppyStatus.Waked)
         {
